@@ -73,7 +73,7 @@ DROP TABLE IF EXISTS `customers`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `customers` (
   `Username` varchar(15) NOT NULL,
-  `ID` varchar(45) NOT NULL,
+  `ID` int NOT NULL,
   `Type` enum('Private','Business') NOT NULL,
   `CompanyID` int DEFAULT NULL,
   `FirstName` varchar(20) NOT NULL,
@@ -88,7 +88,7 @@ CREATE TABLE `customers` (
   PRIMARY KEY (`Username`),
   UNIQUE KEY `ID_UNIQUE` (`ID`),
   KEY `CompanyID_idx` (`CompanyID`),
-  CONSTRAINT `CompanyID1` FOREIGN KEY (`CompanyID`) REFERENCES `companies` (`ID`),
+  CONSTRAINT `CompanyID1` FOREIGN KEY (`CompanyID`) REFERENCES `companies` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `Username1` FOREIGN KEY (`Username`) REFERENCES `users` (`Username`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -99,7 +99,7 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
-INSERT INTO `customers` VALUES ('Customer01','557138427','Business',3,'Yossi','Biton','yossi.biton@microsoft.com','0554272299','Center',NULL,NULL,NULL,2850),('Customer02','306750801','Business',4,'Moshe','Peretz','moshe.peretz@amazon.com','0539374151','South',NULL,NULL,NULL,2780),('Customer03','444242372','Private',NULL,'Rivka','Mizrahi','rivka.mizrahi@walla.com','0532704990','South','8143601717525888','363','2028-08-01',0),('Customer04','520463136','Private',NULL,'Moshe','Azoulay','moshe.azoulay@gmail.com','0583343893','South','0474167200319723','539','2024-12-01',0),('Customer05','635824636','Business',6,'David','Levi','david.levi@alphabet.com','0565546738','South',NULL,NULL,NULL,2930),('Customer06','768209461','Business',3,'Rivka','Levi','rivka.levi@microsoft.com','0579220881','Center',NULL,NULL,NULL,2850),('Customer07','962034036','Private',NULL,'Rivka','Biton','rivka.biton@gmail.com','0531578164','North','8899453704162861','015','2027-11-01',0),('Customer08','444327147','Private',NULL,'David','Mizrahi','david.mizrahi@yahoo.com','0519726249','Center','7566010423083659','120','2024-04-01',0),('Customer09','131007931','Private',NULL,'Oren','Cohen','oren.cohen@yahoo.com','0553960378','North','0781932653284075','653','2026-08-01',0),('Customer10','970133816','Private',NULL,'David','Azoulay','david.azoulay@walla.com','0569750879','North','4515943961873040','494','2030-04-01',0),('Customer11','327655509','Private',NULL,'Yossi','Biton','yossi.biton@yahoo.com','0562113172','North','2462878944354014','322','2026-07-01',0),('Customer12','723215237','Business',4,'Yael','Ohana','yael.ohana@amazon.com','0564201683','South',NULL,NULL,NULL,2780),('Customer13','622376411','Business',5,'David','Peretz','david.peretz@nvidia.com','0587001893','North',NULL,NULL,NULL,2900),('Customer14','952655813','Business',6,'Oren','Cohen','oren.cohen@alphabet.com','0583971096','South',NULL,NULL,NULL,2930),('Customer15','806826944','Business',3,'Yael','Peretz','yael.peretz@microsoft.com','0535822088','Center',NULL,NULL,NULL,2850),('Customer16','468136505','Private',NULL,'Rivka','Dahan','rivka.dahan@yahoo.com','0504704917','Center','5152534445898679','792','2027-11-01',0),('Customer17','510051351','Private',NULL,'Rivka','Shalom','rivka.shalom@gmail.com','0558119040','Center','3614788266193789','293','2025-06-01',0),('Customer18','500493076','Private',NULL,'Eli','Cohen','eli.cohen@yahoo.com','0522810046','South','5009416415482176','355','2025-08-01',0),('Customer19','954807658','Private',NULL,'Avi','Dahan','avi.dahan@yahoo.com','0552108540','South','1884736808215459','728','2030-10-01',0),('Customer20','748043252','Business',1,'Yael','Ohana','yael.ohana@apple.com','0508179647','Center',NULL,NULL,NULL,3000),('Customer21','995398506','Private',NULL,'Moshe','Azoulay','moshe.azoulay@walla.com','0543362702','Center','2427992025942041','079','2026-07-01',0),('Customer22','743523654','Private',NULL,'Noa','Azoulay','noa.azoulay@walla.com','0502168113','Center','0891262169553539','157','2029-11-01',0),('Customer23','225244782','Business',4,'Rivka','Biton','rivka.biton@amazon.com','0501004980','South',NULL,NULL,NULL,2780),('Customer24','592186166','Private',NULL,'Rivka','Levi','rivka.levi@gmail.com','0550887717','South','6285953047213886','393','2025-10-01',0),('Customer25','986817322','Business',1,'David','Shalom','david.shalom@apple.com','0518864390','Center',NULL,NULL,NULL,3000),('Customer26','324605558','Business',3,'Eli','Ohana','eli.ohana@microsoft.com','0569623616','Center',NULL,NULL,NULL,2850),('Customer27','186989215','Business',6,'Shira','Ohana','shira.ohana@alphabet.com','0555722813','South',NULL,NULL,NULL,2930),('Customer28','667131799','Private',NULL,'Noa','Ohana','noa.ohana@yahoo.com','0557608006','South','0275272740169647','503','2025-07-01',0),('Customer29','268939926','Private',NULL,'Moshe','Biton','moshe.biton@yahoo.com','0565421770','Center','9364717509235420','559','2027-11-01',0),('Customer30','286495383','Business',3,'Moshe','Mizrahi','moshe.mizrahi@microsoft.com','0574988320','Center',NULL,NULL,NULL,2850),('Customer31','103903365','Business',3,'David','Levi','david.levi@microsoft.com','0531501838','Center',NULL,NULL,NULL,2850),('Customer32','666882667','Private',NULL,'Oren','Levi','oren.levi@gmail.com','0523098552','Center','9438159257540833','418','2027-12-01',0),('Customer33','702429576','Business',2,'Oren','Azoulay','oren.azoulay@intel.com','0557884887','South',NULL,NULL,NULL,2500),('Customer34','929383828','Business',4,'Noa','Mizrahi','noa.mizrahi@amazon.com','0537517062','South',NULL,NULL,NULL,2780),('Customer35','884372702','Business',1,'Yael','Peretz','yael.peretz@apple.com','0599138453','Center',NULL,NULL,NULL,3000),('Customer36','645986556','Private',NULL,'Eli','Halevi','eli.halevi@gmail.com','0545482782','South','0406904419346005','611','2027-02-01',0),('Customer37','119757556','Private',NULL,'Yael','Cohen','yael.cohen@yahoo.com','0533273154','North','1570624959242011','812','2030-09-01',0),('Customer38','649981514','Private',NULL,'David','Halevi','david.halevi@walla.com','0515436109','North','6984278935799107','525','2024-01-01',0),('Customer39','375818636','Business',2,'Avi','Dahan','avi.dahan@intel.com','0589559021','South',NULL,NULL,NULL,2500),('Customer40','356261983','Business',5,'David','Cohen','david.cohen@nvidia.com','0571266696','North',NULL,NULL,NULL,2900),('Customer41','128553235','Business',5,'Yossi','Dahan','yossi.dahan@nvidia.com','0578636992','North',NULL,NULL,NULL,2900),('Customer42','673527908','Business',1,'Eli','Dahan','eli.dahan@apple.com','0529426056','Center',NULL,NULL,NULL,3000),('Customer43','512975368','Private',NULL,'Noa','Shalom','noa.shalom@gmail.com','0559939320','South','9399782138960962','853','2030-05-01',0),('Customer44','815082928','Business',4,'Yossi','Ohana','yossi.ohana@amazon.com','0542626557','South',NULL,NULL,NULL,2780),('Customer45','213535553','Business',3,'Shira','Levi','shira.levi@microsoft.com','0554701847','Center',NULL,NULL,NULL,2850);
+INSERT INTO `customers` VALUES ('Customer01',557138427,'Business',3,'Yossi','Biton','yossi.biton@microsoft.com','0554272299','Center',NULL,NULL,NULL,2850),('Customer02',306750801,'Business',4,'Moshe','Peretz','moshe.peretz@amazon.com','0539374151','South',NULL,NULL,NULL,2780),('Customer03',444242372,'Private',NULL,'Rivka','Mizrahi','rivka.mizrahi@walla.com','0532704990','South','8143601717525888','363','2028-08-01',0),('Customer04',520463136,'Private',NULL,'Moshe','Azoulay','moshe.azoulay@gmail.com','0583343893','South','0474167200319723','539','2024-12-01',0),('Customer05',635824636,'Business',6,'David','Levi','david.levi@alphabet.com','0565546738','South',NULL,NULL,NULL,2930),('Customer06',768209461,'Business',3,'Rivka','Levi','rivka.levi@microsoft.com','0579220881','Center',NULL,NULL,NULL,2850),('Customer07',962034036,'Private',NULL,'Rivka','Biton','rivka.biton@gmail.com','0531578164','North','8899453704162861','015','2027-11-01',0),('Customer08',444327147,'Private',NULL,'David','Mizrahi','david.mizrahi@yahoo.com','0519726249','Center','7566010423083659','120','2024-04-01',0),('Customer09',131007931,'Private',NULL,'Oren','Cohen','oren.cohen@yahoo.com','0553960378','North','0781932653284075','653','2026-08-01',0),('Customer10',970133816,'Private',NULL,'David','Azoulay','david.azoulay@walla.com','0569750879','North','4515943961873040','494','2030-04-01',0),('Customer11',327655509,'Private',NULL,'Yossi','Biton','yossi.biton@yahoo.com','0562113172','North','2462878944354014','322','2026-07-01',0),('Customer12',723215237,'Business',4,'Yael','Ohana','yael.ohana@amazon.com','0564201683','South',NULL,NULL,NULL,2780),('Customer13',622376411,'Business',5,'David','Peretz','david.peretz@nvidia.com','0587001893','North',NULL,NULL,NULL,2900),('Customer14',952655813,'Business',6,'Oren','Cohen','oren.cohen@alphabet.com','0583971096','South',NULL,NULL,NULL,2930),('Customer15',806826944,'Business',3,'Yael','Peretz','yael.peretz@microsoft.com','0535822088','Center',NULL,NULL,NULL,2850),('Customer16',468136505,'Private',NULL,'Rivka','Dahan','rivka.dahan@yahoo.com','0504704917','Center','5152534445898679','792','2027-11-01',0),('Customer17',510051351,'Private',NULL,'Rivka','Shalom','rivka.shalom@gmail.com','0558119040','Center','3614788266193789','293','2025-06-01',0),('Customer18',500493076,'Private',NULL,'Eli','Cohen','eli.cohen@yahoo.com','0522810046','South','5009416415482176','355','2025-08-01',0),('Customer19',954807658,'Private',NULL,'Avi','Dahan','avi.dahan@yahoo.com','0552108540','South','1884736808215459','728','2030-10-01',0),('Customer20',748043252,'Business',1,'Yael','Ohana','yael.ohana@apple.com','0508179647','Center',NULL,NULL,NULL,3000),('Customer21',995398506,'Private',NULL,'Moshe','Azoulay','moshe.azoulay@walla.com','0543362702','Center','2427992025942041','079','2026-07-01',0),('Customer22',743523654,'Private',NULL,'Noa','Azoulay','noa.azoulay@walla.com','0502168113','Center','0891262169553539','157','2029-11-01',0),('Customer23',225244782,'Business',4,'Rivka','Biton','rivka.biton@amazon.com','0501004980','South',NULL,NULL,NULL,2780),('Customer24',592186166,'Private',NULL,'Rivka','Levi','rivka.levi@gmail.com','0550887717','South','6285953047213886','393','2025-10-01',0),('Customer25',986817322,'Business',1,'David','Shalom','david.shalom@apple.com','0518864390','Center',NULL,NULL,NULL,3000),('Customer26',324605558,'Business',3,'Eli','Ohana','eli.ohana@microsoft.com','0569623616','Center',NULL,NULL,NULL,2850),('Customer27',186989215,'Business',6,'Shira','Ohana','shira.ohana@alphabet.com','0555722813','South',NULL,NULL,NULL,2930),('Customer28',667131799,'Private',NULL,'Noa','Ohana','noa.ohana@yahoo.com','0557608006','South','0275272740169647','503','2025-07-01',0),('Customer29',268939926,'Private',NULL,'Moshe','Biton','moshe.biton@yahoo.com','0565421770','Center','9364717509235420','559','2027-11-01',0),('Customer30',286495383,'Business',3,'Moshe','Mizrahi','moshe.mizrahi@microsoft.com','0574988320','Center',NULL,NULL,NULL,2850),('Customer31',103903365,'Business',3,'David','Levi','david.levi@microsoft.com','0531501838','Center',NULL,NULL,NULL,2850),('Customer32',666882667,'Private',NULL,'Oren','Levi','oren.levi@gmail.com','0523098552','Center','9438159257540833','418','2027-12-01',0),('Customer33',702429576,'Business',2,'Oren','Azoulay','oren.azoulay@intel.com','0557884887','South',NULL,NULL,NULL,2500),('Customer34',929383828,'Business',4,'Noa','Mizrahi','noa.mizrahi@amazon.com','0537517062','South',NULL,NULL,NULL,2780),('Customer35',884372702,'Business',1,'Yael','Peretz','yael.peretz@apple.com','0599138453','Center',NULL,NULL,NULL,3000),('Customer36',645986556,'Private',NULL,'Eli','Halevi','eli.halevi@gmail.com','0545482782','South','0406904419346005','611','2027-02-01',0),('Customer37',119757556,'Private',NULL,'Yael','Cohen','yael.cohen@yahoo.com','0533273154','North','1570624959242011','812','2030-09-01',0),('Customer38',649981514,'Private',NULL,'David','Halevi','david.halevi@walla.com','0515436109','North','6984278935799107','525','2024-01-01',0),('Customer39',375818636,'Business',2,'Avi','Dahan','avi.dahan@intel.com','0589559021','South',NULL,NULL,NULL,2500),('Customer40',356261983,'Business',5,'David','Cohen','david.cohen@nvidia.com','0571266696','North',NULL,NULL,NULL,2900),('Customer41',128553235,'Business',5,'Yossi','Dahan','yossi.dahan@nvidia.com','0578636992','North',NULL,NULL,NULL,2900),('Customer42',673527908,'Business',1,'Eli','Dahan','eli.dahan@apple.com','0529426056','Center',NULL,NULL,NULL,3000),('Customer43',512975368,'Private',NULL,'Noa','Shalom','noa.shalom@gmail.com','0559939320','South','9399782138960962','853','2030-05-01',0),('Customer44',815082928,'Business',4,'Yossi','Ohana','yossi.ohana@amazon.com','0542626557','South',NULL,NULL,NULL,2780),('Customer45',213535553,'Business',3,'Shira','Levi','shira.levi@microsoft.com','0554701847','Center',NULL,NULL,NULL,2850);
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,8 +121,8 @@ CREATE TABLE `employees` (
   PRIMARY KEY (`Username`),
   UNIQUE KEY `ID_UNIQUE` (`ID`),
   KEY `Supplier_idx` (`SupplierID`),
-  CONSTRAINT `SupplierID1` FOREIGN KEY (`SupplierID`) REFERENCES `suppliers` (`ID`),
-  CONSTRAINT `Username4` FOREIGN KEY (`Username`) REFERENCES `users` (`Username`)
+  CONSTRAINT `SupplierID1` FOREIGN KEY (`SupplierID`) REFERENCES `suppliers` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `Username4` FOREIGN KEY (`Username`) REFERENCES `users` (`Username`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -133,6 +133,33 @@ CREATE TABLE `employees` (
 LOCK TABLES `employees` WRITE;
 /*!40000 ALTER TABLE `employees` DISABLE KEYS */;
 /*!40000 ALTER TABLE `employees` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `incomes_reports`
+--
+
+DROP TABLE IF EXISTS `incomes_reports`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `incomes_reports` (
+  `Year` int NOT NULL,
+  `Month` int NOT NULL,
+  `Branch` enum('North','Center','South') NOT NULL,
+  `SupplierID` int NOT NULL,
+  `SupplierName` varchar(30) NOT NULL,
+  `Incomes` int NOT NULL,
+  PRIMARY KEY (`Year`,`Month`,`Branch`,`SupplierID`,`SupplierName`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `incomes_reports`
+--
+
+LOCK TABLES `incomes_reports` WRITE;
+/*!40000 ALTER TABLE `incomes_reports` DISABLE KEYS */;
+/*!40000 ALTER TABLE `incomes_reports` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -169,6 +196,38 @@ LOCK TABLES `items` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `items_in_orders`
+--
+
+DROP TABLE IF EXISTS `items_in_orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `items_in_orders` (
+  `OrderID` int NOT NULL,
+  `ItemID` int DEFAULT NULL,
+  `SupplierID` int NOT NULL,
+  `ItemName` varchar(20) NOT NULL,
+  `Size` enum('Small','Medium','Large','None') NOT NULL DEFAULT 'None',
+  `Doneness` enum('MR','M','MW','WD','None') NOT NULL DEFAULT 'None',
+  `Restrictions` varchar(20) NOT NULL DEFAULT 'None',
+  `Quantity` int NOT NULL,
+  PRIMARY KEY (`OrderID`),
+  KEY `ItemID_idx` (`ItemID`),
+  CONSTRAINT `ItemID` FOREIGN KEY (`ItemID`) REFERENCES `items` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `OrderID1` FOREIGN KEY (`OrderID`) REFERENCES `orders` (`OrderID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `items_in_orders`
+--
+
+LOCK TABLES `items_in_orders` WRITE;
+/*!40000 ALTER TABLE `items_in_orders` DISABLE KEYS */;
+/*!40000 ALTER TABLE `items_in_orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `managers`
 --
 
@@ -197,6 +256,149 @@ LOCK TABLES `managers` WRITE;
 /*!40000 ALTER TABLE `managers` DISABLE KEYS */;
 INSERT INTO `managers` VALUES ('Center',3,'Center Manager','Aviv','Raz','manager.center@biteme.co.il','1800430430'),('CEO',1,'CEO','Ofer','Elzara','ceo@biteme.co.il','1800410410'),('North',2,'North Manager','Oran','Efroni','manager.north@biteme.co.il','1800420420'),('South',4,'South Manager','Sagi','Yosofov','manager.south@biteme.co.il','1800440440');
 /*!40000 ALTER TABLE `managers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orders` (
+  `OrderID` int NOT NULL AUTO_INCREMENT,
+  `Recipient` varchar(45) NOT NULL,
+  `Recipient Phone` varchar(10) NOT NULL,
+  `SupplierID` int NOT NULL,
+  `City` varchar(15) NOT NULL,
+  `Address` varchar(30) NOT NULL,
+  `Branch` enum('North','Center','South') NOT NULL,
+  `SupplyOption` enum('Takeaway','Basic Delivery','Shared Delivery','Robot Delivery') NOT NULL,
+  `Type` enum('Pre-order','Regular') NOT NULL,
+  `RequestDate` date NOT NULL,
+  `RequestTime` time NOT NULL,
+  `ApprovalTime` time DEFAULT NULL,
+  `ArrivalTime` time DEFAULT NULL,
+  `TotalPrice` float NOT NULL,
+  `Status` enum('Awaiting','Approved','Ready','On-time','Late') NOT NULL,
+  PRIMARY KEY (`OrderID`),
+  KEY `Supplier_city` (`SupplierID`,`City`),
+  CONSTRAINT `Supplier_city` FOREIGN KEY (`SupplierID`, `City`) REFERENCES `suppliers_cities` (`SupplierID`, `City`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `orders_participants`
+--
+
+DROP TABLE IF EXISTS `orders_participants`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orders_participants` (
+  `OrderID` int NOT NULL,
+  `CustomerID` int NOT NULL,
+  `AmountPaid` float NOT NULL,
+  PRIMARY KEY (`OrderID`),
+  KEY `CustomerID_idx` (`CustomerID`),
+  CONSTRAINT `CustomerID` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `OrderID2` FOREIGN KEY (`OrderID`) REFERENCES `orders` (`OrderID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders_participants`
+--
+
+LOCK TABLES `orders_participants` WRITE;
+/*!40000 ALTER TABLE `orders_participants` DISABLE KEYS */;
+/*!40000 ALTER TABLE `orders_participants` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `orders_reports`
+--
+
+DROP TABLE IF EXISTS `orders_reports`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orders_reports` (
+  `Year` int NOT NULL,
+  `Month` int NOT NULL,
+  `Branch` enum('North','Center','South') NOT NULL,
+  `SupplierID` int NOT NULL,
+  `SupplierName` varchar(30) NOT NULL,
+  `Category` enum('Salad','First Course','Main Course','Dessert','Beverage') NOT NULL,
+  `Orders` int NOT NULL,
+  PRIMARY KEY (`Year`,`Month`,`Branch`,`SupplierID`,`SupplierName`,`Category`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders_reports`
+--
+
+LOCK TABLES `orders_reports` WRITE;
+/*!40000 ALTER TABLE `orders_reports` DISABLE KEYS */;
+/*!40000 ALTER TABLE `orders_reports` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `performance_reports`
+--
+
+DROP TABLE IF EXISTS `performance_reports`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `performance_reports` (
+  `Year` int NOT NULL,
+  `Month` varchar(45) NOT NULL,
+  `Branch` enum('North','Center','South') NOT NULL,
+  `OnTime` int NOT NULL,
+  `Late` int NOT NULL,
+  PRIMARY KEY (`Year`,`Month`,`Branch`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `performance_reports`
+--
+
+LOCK TABLES `performance_reports` WRITE;
+/*!40000 ALTER TABLE `performance_reports` DISABLE KEYS */;
+/*!40000 ALTER TABLE `performance_reports` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `quarterly_reports`
+--
+
+DROP TABLE IF EXISTS `quarterly_reports`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `quarterly_reports` (
+  `Day` date NOT NULL,
+  `Branch` enum('North','Center','South') NOT NULL,
+  `Orders` int NOT NULL,
+  PRIMARY KEY (`Day`,`Branch`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `quarterly_reports`
+--
+
+LOCK TABLES `quarterly_reports` WRITE;
+/*!40000 ALTER TABLE `quarterly_reports` DISABLE KEYS */;
+/*!40000 ALTER TABLE `quarterly_reports` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -296,4 +498,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-07-29 12:10:19
+-- Dump completed on 2024-07-31 13:53:50
