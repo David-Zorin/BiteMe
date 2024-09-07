@@ -53,7 +53,7 @@ Before you begin, ensure you have the following installed on your system:
    - connect to your MySql (make sure your DB name and password is correct, no need to change anything else)
 
 4. Launch Client (Client.jar)
-   - enter ip and port matching those you entered in the server.jar
+   - enter ip and port matching those you entered in the server
    - click connect
 
 ## Images
