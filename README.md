@@ -45,7 +45,7 @@ Before you begin, ensure you have the following installed on your system:
      - `Client.jar`
      - `Server.jar`
      - `biteme.sql`
-     - `ImportSimulation.zip`
+     - `ImportSimulation.zip` (Optional)
 
 2. Set up the database:
    - Create a MySQL database (named `biteme_db` for example)
