@@ -58,7 +58,7 @@ Before you begin, ensure you have the following installed on your system:
    - enter ip/port matching those you openned the server with
    - click connect
 
-## Images / Featues
+## Images
 Here are some images of our application:
 
 1. **Customer Select Restaurant**
