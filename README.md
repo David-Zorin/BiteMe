@@ -4,7 +4,7 @@
 </p>
 
 ## Project Overview
-BiteMe is a client-server application developed as part of a degree project. It's designed to manage food orders from both private and business accounts for selected restaurants.
+BiteMe is a comprehensive client-server application developed as part of a degree project. It is designed to manage food orders from both private and business accounts for selected restaurants, with multiple user roles and features
 
 ## Technology Stack
 - **Frontend**: JavaFx
