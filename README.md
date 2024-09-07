@@ -49,7 +49,7 @@ Before you begin, ensure you have the following installed on your system:
 
 2. Set up the database:
    - Create a MySQL database (named `biteme_db` for example)
-   - Import the database schema using the provided SQL file in the project:
+   - Import the database schema using the provided SQL file in the project : 'biteme.sql'
 
 3. Launch server (Server.jar)
    - connect to your MySql (make sure your DB name and password is correct, no need to change anything else)
