@@ -45,14 +45,14 @@ Before you begin, ensure you have the following installed on your system:
      - `biteme.sql`
      - `ImportSimulation.zip` (Optional)
 
-2. Set up the database:
+2. **Set up the database**:
    - Create a MySQL database (named `biteme_db` for example)
    - Import the database schema using the provided SQL file in the project : `biteme.sql`
 
-3. Launch server (Server.jar)
+3. **Launch server (Server.jar)**:
    - connect to your MySql Connection (make sure your DB name and password is correct, no need to change anything else)
 
-4. Launch Client (Client.jar)
+4. **Launch Client (Client.jar)**:
    - enter ip and port matching those you entered in the server
    - click connect
 
