@@ -1,4 +1,4 @@
-# BiteMe
+![image](https://github.com/user-attachments/assets/630d204b-9246-4775-b2e5-8ea8c2e15b32)# BiteMe
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3853b632-c2da-4e3f-a768-fbcad23f0120" alt="BiteMe Logo" width="200"/>
 </p>
@@ -55,13 +55,13 @@ Before you begin, ensure you have the following installed on your system:
 Here are some images of our application:
 
 1. **Customer Select Restaurant**
-   ![Select Restaurant Screen](https://i.imgur.com/EXAMPLE5.png)
+   ![Select Restaurant Screen](https://github.com/user-attachments/assets/bf7c923b-b06e-463d-afc3-0b0da7f3ee4a)
 
 2. **Customer Menu Screen**
-   ![Menu Screen](https://i.imgur.com/EXAMPLE6.png)
+   ![Menu Screen](https://github.com/user-attachments/assets/3c8ae75b-c9c1-45e7-983a-4ca943ceb148)
 
 3. **CEO Quarterly Report**
-   ![Quarterly Report](https://i.imgur.com/EXAMPLE7.png)
+   ![Quarterly Report](https://github.com/user-attachments/assets/7fbc0329-33cb-4b92-a869-fc36268b58ae)
 
 4. ** CEO Monthly Report**
    ![Monthly Report](https://github.com/user-attachments/assets/bfd0bcf4-9e94-442d-882a-3650b5f9dd6d)
