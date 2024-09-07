@@ -51,6 +51,20 @@ Before you begin, ensure you have the following installed on your system:
    - enter ip/port matching those you openned the server with
    - click connect
 
+## Images / Featues
+Here are some images of our application:
+
+1. **Customer Select Restaurant**
+   ![Select Restaurant Screen](https://i.imgur.com/EXAMPLE5.png)
+
+2. **Customer Menu Screen**
+   ![Menu Screen](https://i.imgur.com/EXAMPLE6.png)
+
+3. **CEO Quarterly Report**
+   ![Quarterly Report](https://i.imgur.com/EXAMPLE7.png)
+
+4. ** CEO Monthly Report**
+   ![Monthly Report]([https://i.imgur.com/EXAMPLE7.png](https://github.com/user-attachments/assets/bfd0bcf4-9e94-442d-882a-3650b5f9dd6d))
 
 ## Project Outcomes
 - Achieved an overall score of 96
