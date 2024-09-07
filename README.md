@@ -35,7 +35,7 @@ Before you begin, ensure you have the following installed on your system:
 
    - **Option 1: Clone the repository for all project files (if you have Git installed)**:
      ```
-     git clone https://github.com/your-username/biteme.git
+     git clone https://github.com/David-Zorin/BiteMe_G7.git
      cd biteme
      ```
      **Alternatively, you can download the project as a ZIP file from the GitHub repository and extract it.**
