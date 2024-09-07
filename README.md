@@ -1,4 +1,3 @@
-<h1 align="center">BiteMe</h1>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3853b632-c2da-4e3f-a768-fbcad23f0120" alt="BiteMe Logo" width="400"/>
 </p>
