@@ -47,7 +47,7 @@ Before you begin, ensure you have the following installed on your system:
      - `ImportSimulation.zip` (Optional)
 
 2. **Set up the database**:
-   - Create a MySQL database (named `biteme_db` for example)
+   - Create a MySQL database
    - Import the database schema using the provided SQL file in the project : `biteme.sql`
 
 3. **Launch server (Server.jar)**:
