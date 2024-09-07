@@ -18,7 +18,7 @@ BiteMe is a comprehensive client-server application developed as part of a degre
 Before you begin, ensure you have the following installed on your system:
 
 1. **Java Development Kit (JDK)** - Version 8
-   - Download: [Oracle JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+   - Download: [Oracle JDK](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html)
    - Verify installation: `java -version`
 
 2. **MySQL Database** - Version 8.0.xx
