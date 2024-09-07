@@ -31,23 +31,30 @@ Before you begin, ensure you have the following installed on your system:
    - Verify installation: `git --version`
 
 ### Installation and Usage
+1. **Download project files:**
 
-1. Clone the repository (if you have Git installed):
-   ```
-   git clone https://github.com/your-username/biteme.git
-   cd biteme
-   ```
-   Alternatively, you can download the project as a ZIP file from the GitHub repository and extract it.
-   or just download the specific files needed (Client.jar, Server.jar, biteme.sql, ImportSimulation.zip)
+   - **Option 1: Clone the repository for all project files (if you have Git installed)**:
+     ```
+     git clone https://github.com/your-username/biteme.git
+     cd biteme
+     ```
+     **Alternatively, you can download the project as a ZIP file from the GitHub repository and extract it.**
+   
+   - **Option 2: Download specific files**:
+     You can download the following files individually from the GitHub repository:
+     - `Client.jar`
+     - `Server.jar`
+     - `biteme.sql`
+     - `ImportSimulation.zip`
 
-3. Set up the database:
+2. Set up the database:
    - Create a MySQL database (named `biteme_db` for example)
    - Import the database schema using the provided SQL file in the project:
 
-4. Launch server (Server.jar)
+3. Launch server (Server.jar)
    - connect to your MySql (make sure your DB name and password is correct, no need to change anything else)
 
-5. Launch Client (Client.jar)
+4. Launch Client (Client.jar)
    - enter ip/port matching those you openned the server with
    - click connect
 
