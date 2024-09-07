@@ -25,7 +25,7 @@ Before you begin, ensure you have the following installed on your system:
    - Download: [MySQL Community Server](https://dev.mysql.com/downloads/mysql/)
    - Verify installation: `mysql --version`
 
-3. **Git** (Optional, but recommended for version control and easy project download)
+3. **Git** (Optional)
    - Download: [Git](https://git-scm.com/downloads)
    - Verify installation: `git --version`
 
