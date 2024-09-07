@@ -10,7 +10,6 @@ BiteMe is a comprehensive client-server application developed as part of a degre
 - **Frontend**: JavaFx
 - **Backend**: Java
 - **Client-Server Communication**: OCSF Framework
-- **MySQL Connector/J (JDBC driver for MySQL)
 
 ## Getting Started
 
