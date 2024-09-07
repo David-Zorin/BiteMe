@@ -64,7 +64,7 @@ Here are some images of our application:
    ![Quarterly Report](https://i.imgur.com/EXAMPLE7.png)
 
 4. ** CEO Monthly Report**
-   ![Monthly Report]([https://i.imgur.com/EXAMPLE7.png](https://github.com/user-attachments/assets/bfd0bcf4-9e94-442d-882a-3650b5f9dd6d))
+   ![Monthly Report](https://github.com/user-attachments/assets/bfd0bcf4-9e94-442d-882a-3650b5f9dd6d)
 
 ## Project Outcomes
 - Achieved an overall score of 96
