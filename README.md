@@ -16,10 +16,10 @@ BiteMe is a client-server application developed as part of a degree project. It'
 Before you begin, ensure you have the following installed on your system:
 
 1. **Java Development Kit (JDK)** - Version 8 or later
-   - Download: [Oracle JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) or [OpenJDK](https://adoptopenjdk.net/)
+   - Download: [Oracle JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
    - Verify installation: `java -version`
 
-2. **MySQL Database**
+2. **MySQL Database** - Version 8.0.xx
    - Download: [MySQL Community Server](https://dev.mysql.com/downloads/mysql/)
    - Verify installation: `mysql --version`
 
@@ -35,15 +35,16 @@ Before you begin, ensure you have the following installed on your system:
    cd biteme
    ```
    Alternatively, you can download the project as a ZIP file from the GitHub repository and extract it.
+   or just download the specific files needed (Client.jar, Server.jar, biteme.sql, ImportSimulation.zip)
 
-2. Set up the database:
+3. Set up the database:
    - Create a MySQL database (named `biteme_db` for example)
    - Import the database schema using the provided SQL file in the project:
 
-3. Launch server (Server.jar)
+4. Launch server (Server.jar)
    - connect to your MySql (make sure your DB name and password is correct, no need to change anything else)
 
-4. Launch Client (Client.jar)
+5. Launch Client (Client.jar)
    - enter ip/port matching those you openned the server with
    - click connect
 
