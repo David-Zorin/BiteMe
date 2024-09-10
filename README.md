@@ -22,7 +22,6 @@ Before you begin, ensure you have the following installed on your system:
    - Verify installation: `java -version`
 2. **MySQL Database** - Version 8.0.xx
    - Download: [MySQL Community Server](https://dev.mysql.com/downloads/mysql/)
-   - Verify installation: `mysql --version`
 3. **Git** (Optional)
    - Download: [Git](https://git-scm.com/downloads)
    - Verify installation: `git --version`
