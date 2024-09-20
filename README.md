@@ -30,7 +30,7 @@ Before you begin, ensure you have the following installed on your system:
 1. **Download project files:**
    - **Option 1: Clone the repository for all project files (if you have Git installed)**:
      ```
-     git clone https://github.com/David-Zorin/BiteMe_G7.git
+     git clone https://github.com/David-Zorin/BiteMe.git
      ```
      **Alternatively, you can download the project as a ZIP file from the GitHub repository and extract it.**
    
